@@ -2,6 +2,8 @@
 
 Hubot script for accessing Confluence
 
+[![Build Status](https://travis-ci.org/TrentScholl/hubot-confluence.svg?branch=master)](https://travis-ci.org/TrentScholl/hubot-confluence)
+
 ## Configuration
 
 * HUBOT\_CONFLUENCE\_URL - URL for Confluence installation (no trailing slash)
