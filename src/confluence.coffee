@@ -21,7 +21,7 @@ max_results = process.env.HUBOT_CONFLUENCE_MAX_RESULTS || 5
 confluence_request = (msg, term, handler) ->
   auth = new Buffer(process.env.HUBOT_CONFLUENCE_USER + ':' + process.env.HUBOT_CONFLUENCE_PASSWORD).toString('base64')
 
-  msg.http(process.env.HUBOT_CONFLUENCE_URL+"/rest/prototype/latest/search?query=#{term}")
+  msg.http(process.env.HUBOT_CONFLUENCE_URL+"/rest/prototype/latest/search?type=page&query=#{term}")
     .headers(Authorization: "Basic #{auth}", Accept: "application/json")
       .get() (err, res, body) ->
         if err
